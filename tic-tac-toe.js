@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", function(){
         squares[i].classList.add("square");
 
         squares[i].addEventListener("click", function (){
+            if(this.textContent !== ""){
+                return;
+            }
+            
             this.textContent = currentPlayer;
             this.classList.add(currentPlayer);
 
