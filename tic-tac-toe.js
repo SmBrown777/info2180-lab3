@@ -49,6 +49,21 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         });
 
+        const newGame = document.querySelector(".btn")
+
+        newGame.addEventListener("click", function(){
+            for (let i = 0; i < squares.length; i++){
+                squares[i].textContent = "";
+                squares[i].classList.remove("X", "O", "hover");
+            }
+
+            currentPlayer = "X";
+
+            status.textContent =
+                "Let your mouse hover over a square, then click the square to play an X or an O.";
+            status.classList.remove("you-won");
+        })
+
                     
         squares[i].addEventListener("mouseover", function() {
             this.classList.add("hover");
